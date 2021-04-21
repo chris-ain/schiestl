@@ -125,7 +125,7 @@ function init() {
     mesh1.rotation.set(Math.random() * 2, Math.random() * 2, Math.random() * 2);
     mesh1.scale.x = mesh1.scale.y = mesh1.scale.z = Math.random() * 0.5;
     mesh1.scale.x = mesh1.scale.y = mesh1.scale.z = 2;
-    object.add(mesh1);
+    //object.add(mesh1);
   }
 
   for (var i = 0; i < 900; i++) {
