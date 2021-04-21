@@ -321,6 +321,8 @@ renderer.render(scene, camera);
 
 
 
-  render();
-}
 
+};
+function render () {
+	  render();
+}
