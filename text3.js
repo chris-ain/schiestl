@@ -5,7 +5,7 @@ const container = document.body;
 let clock = new THREE.Clock();
 let camera, renderer, scene, raycaster, mesh1;
 let mouse = new THREE.Vector2();
-config.particleNum = 1000;
+config.particleNum = 900;
 var object, circle, skelet, particle, mesh2;
 
 init();
@@ -128,7 +128,7 @@ function init() {
     object.add(mesh1);
   }
 
-  for (var i = 0; i < 1000; i++) {
+  for (var i = 0; i < 900; i++) {
     var mesh2 = new THREE.Mesh(geometry7, material7);
     mesh2.position
       .set(Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5)
