@@ -108,7 +108,7 @@ function init() {
   var geometry7 = new THREE.TetrahedronGeometry(2, 2);
 
   var material7 = new THREE.MeshPhysicalMaterial({
-    color: 0xf45a04,
+    color: 0x919191,
     shading: THREE.FlatShading,
     reflectivity: 56,
     roughness: 0.4,
