@@ -33,7 +33,7 @@ function init() {
     CAMERA_FAR
   );
 
-  camera.position.set(0, 0, 25);
+  camera.position.set(0, 2, 25);
 
   {
     const near = 1;
