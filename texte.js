@@ -1,7 +1,3 @@
-import * as THREE from "/build/three.module.js";
-
-
-
 const config = {};
 
 const container = document.body;
@@ -173,9 +169,6 @@ function init() {
 
         const matcapTexture = textureLoader.load(MATCAP_URL);
      
-   
-
-   
 
         sectionsInfo.forEach((section, index) => {
             const sectionGroup = new THREE.Group();
