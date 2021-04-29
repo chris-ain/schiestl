@@ -33,7 +33,15 @@ function init() {
     CAMERA_FAR
   );
 
-  camera.position.set(0, 2, 25);
+  const matnull =  new THREE.MeshPhongMaterial();
+
+  const nullobj = new THREE.BoxBufferGeometry(2,2);
+  const nullmesh = new THREE.Mesh(nullobj, matnull)
+  scene.add(nullmesh)
+  nullmesh.position.set(0,2,25)
+
+nullmesh.add(camera)
+//   camera.position.set(0, 2, 25);
 
   {
     const near = 1;
@@ -237,9 +245,9 @@ function init() {
 
   window.addEventListener("mousemove", onMouseMove, false);
 
-  document.addEventListener("mousewheel", (event) => {
-    camera.position.z -= (event.deltaY / 10) * 0.25;
-  });
+//   document.addEventListener("mousewheel", (event) => {
+//     camera.position.z -= (event.deltaY / 10) * 0.25;
+//   });
 
   renderer = new THREE.WebGLRenderer({ antialias: true });
   renderer.setPixelRatio(window.devicePixelRatio);
@@ -261,6 +269,21 @@ function onWindowResize() {
 
 function animate() {
   requestAnimationFrame(animate);
+
+
+ScrollTrigger.create({
+    trigger: "wrapper",
+    start: "top top",
+    endTrigger: "wrapper",
+    end: "bottom bottom",
+    scrub: 3,
+
+    onUpdate: (self) => {
+        camera.position.z = -150 * 3.14 * self.progress;
+        //camera.position.y =45*3.14*self.progress
+        //console.log(camera);
+    },
+});
 
   object.rotation.x += 0.003;
   object.rotation.y += 0.0003;
