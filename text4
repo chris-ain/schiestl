@@ -1,7 +1,7 @@
 
 const config = {};
 
-const container = document.body;
+const container = document.getElementById ("canvas");
 let clock = new THREE.Clock();
 let camera, renderer, scene, raycaster, mesh1;
 let mouse = new THREE.Vector2();
